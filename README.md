@@ -1,112 +1,94 @@
-Wishbone Bus Interface – Design and Verification (SystemVerilog)
-Overview
+# Wishbone Bus Interface – SystemVerilog Design & Verification
 
+## Project Overview
 This project implements a Wishbone point-to-point bus interface for on-chip communication between Master and Slave IP cores in SoC designs.
+
 The design supports:
+- Single-cycle read/write transfers  
+- Block/Burst transfers using CTI signaling  
 
-Single-cycle read/write transfers
+Scalability verified across multiple data widths:
+- 8-bit, 16-bit, 32-bit, and 64-bit
 
-Block/burst transfers using CTI signaling
+Core Wishbone signals (`cyc`, `stb`, `ack`, `we`, `adr`, `dat`, `cti`) are thoroughly verified through simulation to ensure proper timing, sequencing, and protocol adherence.
 
-Scalability is demonstrated across data widths: 8-bit, 16-bit, 32-bit, and 64-bit.
-Protocol correctness for core Wishbone signals (cyc, stb, ack, we, adr, dat, cti) is thoroughly verified through simulation.
+---
 
-Objectives
+## Objectives
+- Implement Wishbone Master and Slave with correct handshake logic  
+- Support single & burst data transactions  
+- Ensure valid address & data sequencing during burst operations  
+- Develop a SystemVerilog testbench ensuring complete protocol compliance  
 
-Implement Wishbone Master and Slave with proper handshake behavior
+---
 
-Support both single and burst transfers
+## Master Design
+The Master module follows an FSM-based architecture with:
+- **IDLE**, **BUS_REQUEST**, **BUS_WAIT** states  
 
-Ensure correct address sequencing and timing
+It generates key control signals:
+- `cyc_o`, `stb_o`, `we_o`, `sel_o`, `adr_o`, `dat_o`, `cti_o`
 
-Develop SystemVerilog verification environment for protocol compliance
+Features:
+- Handles both classic and burst transfers  
+- Terminates burst with **CTI = 3'b111**  
+- Captures Slave responses (`ack_i`, `err_i`)  
 
-Master Design
+---
 
-FSM-based design with:
+## Slave Design
+A synchronous memory-based Wishbone Slave supporting:
+- Read, Write, Burst access modes  
 
-IDLE, BUS_REQUEST, BUS_WAIT states
+### CTI Mode Support
+| CTI Code | Operation Type |
+|---------|----------------|
+| `000` | Classic single transfer |
+| `001` | Incrementing burst |
+| `010` | Linear burst |
+| `111` | Burst end |
 
-Generates key control signals:
+Additional Features:
+- Burst counter to maintain sequencing  
+- Generates **ACK** and **ERR** responses  
+- **Tag-Add** feature: returns `mem[0] + mem[1]`  
 
-cyc_o, stb_o, we_o, sel_o, adr_o, dat_o, cti_o
+---
 
-Handles single + block transfers with Burst-End signaling
+## Top-Level Integration
+- Connects Master and Slave together for functional Wishbone operation  
+- Ensures proper handshake and CTI decoding  
+- Includes debug (`dbg_*`) signals to aid waveform monitoring  
 
-Captures Slave responses (ACK, ERR)
+---
 
-Slave Design
+## Verification Environment
+A modular SystemVerilog testbench with:
+- **Generator** → Constrained-random stimulus  
+- **Driver** → Drives bus protocol signals  
+- **Monitor** → Observes Wishbone transactions  
+- **Scoreboard** → Reference memory for data checking  
 
-Synchronous memory supporting:
+Verification targets:
+- Handshake correctness  
+- Burst sequencing and timing  
+- ACK/ERR behavior  
+- Data integrity and Tag-Add correctness  
+- Burst completion using `CTI = 3'b111`  
 
-Read, write, burst access
+---
 
-CTI support:
+## Test Scenarios
+- Classic read/write operations  
+- Incrementing & linear burst transfers  
+- Burst termination using CTI End code  
+- Invalid address → error signaling  
 
-000 → Classic single transfer
+---
 
-001 → Incrementing burst
-
-010 → Linear burst
-
-111 → Burst End
-
-Burst counter for block transfer sequencing
-
-Error generation for invalid access
-
-Tag-Add feature: returns mem[0] + mem[1]
-
-Top-Level Integration
-
-Combines Master + Slave into a Wishbone interconnect
-
-Ensures correct timing for CTI-based burst execution
-
-Exposes debug signals for waveform analysis
-
-Verification Environment
-
-Structured SystemVerilog testbench consisting of:
-
-Generator → Constrained-random stimulus
-
-Driver → Drives protocol-valid signal sequences
-
-Monitor → Observes bus behavior
-
-Scoreboard → Validates memory integrity
-
-Verification ensures:
-
-Correct handshake and protocol sequencing
-
-Wait-state handling in burst transfers
-
-Proper ACK/ERR behavior
-
-Validity of Tag-Add operations
-
-Burst completion using cti = 111
-
-Test Scenarios
-
-Classic read/write cycles
-
-Incrementing & Linear burst sequences
-
-Burst termination
-
-Invalid address detection & ERR response
-
-Simulation Results
-
-Waveform and log-based validation confirms:
-
-Accurate bus timing and state transitions
-
-Data integrity in single and burst transactions
-
-Proper CTI decoding and burst addressing
-
-Functional Tag-Add support
+## Simulation Results
+Waveform & log-based functional validation confirm:
+- Correct Wishbone timing and state transitions  
+- Accurate read/write data transactions  
+- Proper ACK/ERR signaling  
+- Full protocol compliance under burst conditions  
