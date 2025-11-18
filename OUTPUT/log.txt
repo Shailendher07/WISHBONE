@@ -1,0 +1,2381 @@
+[2025-11-08 18:31:49 UTC] vcs -full64 -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' design.sv testbench.sv  && ./simv +vcs+lic+wait  
+                         Chronologic VCS (TM)
+       Version U-2023.03-SP2_Full64 -- Sat Nov  8 13:31:50 2025
+
+                    Copyright (c) 1991 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'design.sv'
+Parsing design file 'testbench.sv'
+Top Level Modules:
+       testbench
+TimeScale is 1 ns / 1 ps
+
+Warning-[TFIPC] Too few instance port connections
+testbench.sv, 709
+testbench, "wishbone_top #(.ADDR_WIDTH(ADDR_WIDTH), .DATA_WIDTH(DATA_WIDTH), .SEL_WIDTH(SEL_WIDTH)) dut( .clk_i (clk),  .rst_i (i_intf.rst),  .addr_o (i_intf.addr_o),  .data_o (i_intf.data_o),  .we_o (i_intf.we_o),  .stb_o (i_intf.stb_o),  .cyc_o (i_intf.cyc_o),  .sel_o (i_intf.sel_o),  .cti_input (i_intf.cti_input),  .tag_add (i_intf.tag_add),  .ack_i (i_intf.ack_i),  .err_i (i_intf.err_i),  .data_i (i_intf.data_i),  .state_out (i_intf.state_out),  .counter (i_intf.counter_dbg));"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+
+Warning-[INTFDV] VCD dumping of interface/program/package
+testbench.sv, 740
+  Selective VCD dumping of interface 'wishbone_if' is not supported.  
+  Selective VCD dumping for interfaces, packages and programs is not 
+  supported.
+  Use full VCD dumping '$dumpvars(0)', or use VPD or FSDB dumping, recompile 
+  with '-debug_access'.
+
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+
+5 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository
+recompiling module wishbone_top
+recompiling module wishbone_if
+recompiling module test
+recompiling module testbench
+All of 5 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/vcsmx/vcs/U-2023.03-SP2/linux64/lib -L/apps/vcsmx/vcs/U-2023.03-SP2/linux64/lib  -Wl,-rpath-link=./   objs/amcQw_d.o   _331_archive_1.so   SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile -luclinative /apps/vcsmx/vcs/U-2023.03-SP2/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/vcsmx/vcs/U-2023.03-SP2/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .667 seconds to compile + .613 seconds to elab + .294 seconds to link
+Chronologic VCS simulator copyright 1991-2023
+Contains Synopsys proprietary information.
+Compiler version U-2023.03-SP2_Full64; Runtime version U-2023.03-SP2_Full64;  Nov  8 13:31 2025
+# Driver: All DUT signals reset to 0
+
+
+# -----------------------------
+# [GENERATOR] PHASE 1: WRITE Transactions (we=1)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 8, data_out = b36931a9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 1f, data_out = 3be67cb8, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 18, data_out = 8978feee, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 11, data_out = 42ee42aa, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 1c, data_out = 9db05fab, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 2, data_out = 24bdfcb4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 7, data_out = 9074b3f9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 19, data_out = d9a4fe1f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 2, data_out = f4a45af6, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 11, data_out = 9ce1121f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 12, data_out = 783e42f5, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = e, data_out = 46a49355, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 5, data_out = e7d7ec2b, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = e, data_out = 9108da13, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 19, data_out = 8332e47d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 4, data_out = d3f60a5f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 2, data_out = 59272796, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 10, data_out = 861f2299, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 0, data_out = 82f4ac19, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 8, data_out = 95f997cb, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 1a, data_out = 5b03ab02, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 17, data_out = 72b48af2, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 0, data_out = 222b4918, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 19, data_out = e2f0b97, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = a, data_out = 1bec8db4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 11, data_out = 881e1c17, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 8, data_out = df88521d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 13, data_out = 83c56518, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 4, data_out = e318848d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 7, data_out = e851f4f0, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 1b, data_out = 55ab47f1, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - WRITE ] 
+# -------------------------
+# - addr = 7, data_out = 43f33343, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 2: READ Transactions (we=0)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 15, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 12, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 9, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 18, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 1a, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = b, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 2, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - READ ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 3: TAG ADD Transactions (we=0 & tag_add=1)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - TAG ADD READ ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 4: BLOCK WRITE (we=1 & cti = 001)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE (addr=0) ] 
+# -------------------------
+# - addr = 0, data_out = aea6f21b, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE (addr=1) ] 
+# -------------------------
+# - addr = 1, data_out = f0653cc4, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 4: BLOCK READ (we=0 & cti = 001)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK READ (addr=0) ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - BLOCK READ (addr=1) ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 6: TAG ADD Transactions (we=0 & tag_add=1)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - TAG ADD READ ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 7: BLOCK END (we=1 & cti = 111)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE END ] 
+# -------------------------
+# - addr = 19, data_out = 5bc46dbc, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 7: BLOCK WRITE (we=1 & cti = 010)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE FOR THE CTI = 010 (addr=0) ] 
+# -------------------------
+# - addr = 0, data_out = 2542a3fe, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE FOR THE CTI = 010 (addr=1) ] 
+# -------------------------
+# - addr = 0, data_out = cca5d01e, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 7: BLOCK END (we=1 & cti = 111)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE END ] 
+# -------------------------
+# - addr = b, data_out = 446943f6, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 10: BLOCK WRITE (we=1 & cti = 010)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE FOR THE CTI = 010 (addr=0) ] 
+# -------------------------
+# - addr = 0, data_out = 760a743, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE FOR THE CTI = 010 (addr=1) ] 
+# -------------------------
+# - addr = 0, data_out = b412d0a5, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 11: TAG ADD Transactions (we=0 & tag_add=1)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - TAG ADD READ ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# -----------------------------
+# [GENERATOR] PHASE 12: BLOCK END (we=1 & cti = 111)
+# -----------------------------
+
+# -------------------------
+# - [ Generator - BLOCK WRITE END ] 
+# -------------------------
+# - addr = 16, data_out = a76f986d, we = 0, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# [GENERATOR] Finished sending 78 transactions
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 8, data_out = b36931a9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 8, data_out = b36931a9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=8 Data=0xb36931a9 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 8, data_out = b36931a9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1f, data_out = 3be67cb8, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1f, data_out = 3be67cb8, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=31 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1f, data_out = 3be67cb8, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 18, data_out = 8978feee, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 18, data_out = 8978feee, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=24 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 18, data_out = 8978feee, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 11, data_out = 42ee42aa, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 11, data_out = 42ee42aa, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=17 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 11, data_out = 42ee42aa, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1c, data_out = 9db05fab, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1c, data_out = 9db05fab, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=28 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1c, data_out = 9db05fab, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 2, data_out = 24bdfcb4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 2, data_out = 24bdfcb4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=2 Data=0x24bdfcb4 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 2, data_out = 24bdfcb4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 7, data_out = 9074b3f9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 7, data_out = 9074b3f9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=7 Data=0x9074b3f9 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 7, data_out = 9074b3f9, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 19, data_out = d9a4fe1f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 19, data_out = d9a4fe1f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=25 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 19, data_out = d9a4fe1f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 2, data_out = f4a45af6, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 2, data_out = f4a45af6, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=2 Data=0xf4a45af6 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 2, data_out = f4a45af6, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 11, data_out = 9ce1121f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 11, data_out = 9ce1121f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=17 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 11, data_out = 9ce1121f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 12, data_out = 783e42f5, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 12, data_out = 783e42f5, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=18 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 12, data_out = 783e42f5, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = e, data_out = 46a49355, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = e, data_out = 46a49355, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=14 Data=0x46a49355 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = e, data_out = 46a49355, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 5, data_out = e7d7ec2b, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 5, data_out = e7d7ec2b, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=5 Data=0xe7d7ec2b stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 5, data_out = e7d7ec2b, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = e, data_out = 9108da13, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = e, data_out = 9108da13, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=14 Data=0x9108da13 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = e, data_out = 9108da13, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 19, data_out = 8332e47d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 19, data_out = 8332e47d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=25 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 19, data_out = 8332e47d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 4, data_out = d3f60a5f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 4, data_out = d3f60a5f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=4 Data=0xd3f60a5f stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 4, data_out = d3f60a5f, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 2, data_out = 59272796, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 2, data_out = 59272796, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=2 Data=0x59272796 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 2, data_out = 59272796, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 10, data_out = 861f2299, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 10, data_out = 861f2299, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=16 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 10, data_out = 861f2299, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 82f4ac19, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 82f4ac19, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=0 Data=0x82f4ac19 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 82f4ac19, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 8, data_out = 95f997cb, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 8, data_out = 95f997cb, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=8 Data=0x95f997cb stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 8, data_out = 95f997cb, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1a, data_out = 5b03ab02, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1a, data_out = 5b03ab02, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=26 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1a, data_out = 5b03ab02, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 17, data_out = 72b48af2, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 17, data_out = 72b48af2, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=23 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 17, data_out = 72b48af2, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 222b4918, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 222b4918, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=0 Data=0x222b4918 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 222b4918, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 19, data_out = e2f0b97, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 19, data_out = e2f0b97, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=25 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 19, data_out = e2f0b97, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = a, data_out = 1bec8db4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = a, data_out = 1bec8db4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=10 Data=0x1bec8db4 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = a, data_out = 1bec8db4, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 11, data_out = 881e1c17, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 11, data_out = 881e1c17, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=17 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 11, data_out = 881e1c17, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 8, data_out = df88521d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 8, data_out = df88521d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=8 Data=0xdf88521d stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 8, data_out = df88521d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 13, data_out = 83c56518, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 13, data_out = 83c56518, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=19 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 13, data_out = 83c56518, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 4, data_out = e318848d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 4, data_out = e318848d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=4 Data=0xe318848d stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 4, data_out = e318848d, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 7, data_out = e851f4f0, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 7, data_out = e851f4f0, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=7 Data=0xe851f4f0 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 7, data_out = e851f4f0, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1b, data_out = 55ab47f1, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1b, data_out = 55ab47f1, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [WRITE][PASS] Addr=27 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1b, data_out = 55ab47f1, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 7, data_out = 43f33343, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 7, data_out = 43f33343, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=7 Data=0x43f33343 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 7, data_out = 43f33343, we = 1, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=15 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 43f33343, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=7 Data match  (Expected=0x43f33343, Got=0x43f33343)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 43f33343, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 15, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 15, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=21 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 15, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 12, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 12, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=18 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 12, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=30 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=29 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 43f33343, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=7 Data match  (Expected=0x43f33343, Got=0x43f33343)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 7, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 43f33343, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 9, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 9, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=9 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 9, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=31 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=30 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1e, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=16 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=20 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=29 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 18, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 18, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=24 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 18, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1a, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1a, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=26 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1a, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=15 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=3 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=20 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 14, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=23 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = b, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = b, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=11 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = b, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=12 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=3 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=12 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = c, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = df88521d, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=8 Data match  (Expected=0xdf88521d, Got=0xdf88521d)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = df88521d, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=13 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = d, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=3 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 3, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=23 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 17, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=15 Data match  (Expected=0x0, Got=0x0)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = f, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = df88521d, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=8 Data match  (Expected=0xdf88521d, Got=0xdf88521d)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 8, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = df88521d, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=16 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 2, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 2, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 59272796, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=2 Data match  (Expected=0x59272796, Got=0x59272796)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 2, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 59272796, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# [READ][PASS] Addr=16 Invalid access handled (ERR=1,ACK=0) 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 10, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 0
+# - data_in = 0, ack = 0, err = 1
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 0
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+Error: "testbench.sv", 570: $unit::\scoreboard::run .unnamed$$_0: at time 798000 ps
+ TAG ADD MISMATCH -> exp=222b4918 got=00000000
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 0
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = aea6f21b, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = aea6f21b, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=0 Data=0xaea6f21b stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = aea6f21b, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1, data_out = f0653cc4, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1, data_out = f0653cc4, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=1 Data=0xf0653cc4 stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1, data_out = f0653cc4, we = 1, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = aea6f21b, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=0 Data match  (Expected=0xaea6f21b, Got=0xaea6f21b)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = aea6f21b, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = f0653cc4, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=1 Data match  (Expected=0xf0653cc4, Got=0xf0653cc4)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 0, cti = 1
+# - data_in = f0653cc4, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 1
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 1
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+ TAG ADD OK -> SUM(aea6f21b + f0653cc4) = 9f0c2edf
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 1
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI - 111 ] 
+# -------------------------
+# - addr = 19, data_out = 5bc46dbc, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 9f0c2edf, ack = 0, err = 0
+# -------------------------
+
+# BLOCK EXIT DONE 
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 19, data_out = 5bc46dbc, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 2542a3fe, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 2542a3fe, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=0 Data=0x2542a3fe stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 2542a3fe, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = cca5d01e, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1, data_out = cca5d01e, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+# [WRITE][PASS] Addr=1 Data=0xcca5d01e stored 
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1, data_out = cca5d01e, we = 1, sel = f, tag_add = 0, cti = 2
+# - data_in = 9f0c2edf, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI - 111 ] 
+# -------------------------
+# - addr = b, data_out = 446943f6, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 9f0c2edf, ack = 0, err = 0
+# -------------------------
+
+# BLOCK EXIT DONE 
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = b, data_out = 446943f6, we = 1, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 760a743, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 0, data_out = 760a743, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 2542a3fe, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=0 Data match  (Expected=0x2542a3fe, Got=0x2542a3fe)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 0, data_out = 760a743, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 2542a3fe, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = b412d0a5, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1, data_out = b412d0a5, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = cca5d01e, ack = 1, err = 0
+# -------------------------
+
+# [READ][PASS] Addr=1 Data match  (Expected=0xcca5d01e, Got=0xcca5d01e)
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1, data_out = b412d0a5, we = 0, sel = f, tag_add = 0, cti = 2
+# - data_in = cca5d01e, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 0, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 2
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI=000/001/010 ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 2
+# - data_in = f1e8741c, ack = 1, err = 0
+# -------------------------
+
+ TAG ADD OK -> SUM(2542a3fe + cca5d01e) = f1e8741c
+# -------------------------
+# - [ Scoreboard ] 
+# -------------------------
+# - addr = 1, data_out = 0, we = 0, sel = f, tag_add = 1, cti = 2
+# - data_in = f1e8741c, ack = 1, err = 0
+# -------------------------
+
+# -------------------------
+# - [ Monitor - CTI - 111 ] 
+# -------------------------
+# - addr = 16, data_out = a76f986d, we = 0, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+# BLOCK EXIT DONE 
+# -------------------------
+# - [ Driver ] 
+# -------------------------
+# - addr = 16, data_out = a76f986d, we = 0, sel = f, tag_add = 0, cti = 7
+# - data_in = 0, ack = 0, err = 0
+# -------------------------
+
+
+# ================================================
+# TEST COMPLETE : All transactions processed!
+# Generator: 78 | Driver: 78 | Scoreboard: 78
+# ================================================
+
+$finish called from file "testbench.sv", line 663.
+$finish at simulation time               978000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 978000 ps
+CPU Time:      0.450 seconds;       Data structure size:   0.0Mb
+Sat Nov  8 13:31:52 2025
+Finding VCD file...
+./wishbone_wave.vcd
+[2025-11-08 18:31:52 UTC] Opening EPWave...
+Done
